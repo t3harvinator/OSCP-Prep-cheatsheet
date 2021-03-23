@@ -210,3 +210,11 @@ git checkout -- .
 ```
 i686-w64-mingw32-gcc 40564.c -o priv_esc.exe -lws2_32
 ```
+## Hashcat
+```
+hashcat64 -m 400 -a 0 hash.txt wordlist.txt
+```
+Can get the mode with
+```
+hashid -m [file]
+```

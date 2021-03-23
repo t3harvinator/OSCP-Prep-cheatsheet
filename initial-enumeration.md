@@ -82,6 +82,7 @@ RETR <email numbr> - To retrieve emails
 ````
 Might indicate a domain controller on Windows 
 Check for zone transfer - 
+dig axfr [example.com] @DNSServerIP
 ````
 
 ### Kerberos - Port 88 
