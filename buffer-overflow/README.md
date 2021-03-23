@@ -1,5 +1,7 @@
 ### REFERENCE - Notes copied THM Buffer overflow room - https://tryhackme.com/room/bufferoverflowprep
 
+Also look at this too
+https://github.com/3isenHeiM/OSCP-BoF
 
 ### Mona Configuration
 
