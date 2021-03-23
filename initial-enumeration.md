@@ -4,13 +4,14 @@
 ````
 > sudo nmap -sS -p- IP
 ````
-
 ### NMAP Second Scan
-....
+````
 > sudo nmap -sC -sV -p[PORTS] [IP] -Pn -oN manual_scan.txt
-....
-
-
+````
+### NMAP UDP Scan
+````
+> sudo nmap -sU --top-ports=1000 [IP] -oN manual_udp_scan.txt
+````
 ### NMAP TCP quick 
 ````
 > sudo nmap -Pn -v -sS -sV -sC -oN tcp-quick.nmap IP
@@ -134,12 +135,26 @@ Dirb
 ````
 Gobuster 
 ````
+> gobuster dir -u http://10.10.10.117:80/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -z -k -x "txt,html,php,asp,aspx,jsp" -o "/home/t3harvinator/HTB/Irked/results/scans/tcp_80_http_gobuster.txt"
 > gobuster dir --url IP --wordlist /usr/share/seclists/Discovery/Web-Content/big.txt
 > gobuster dir --url IP --wordlist /usr/share/seclists/Discovery/Web-Content/big.txt -k -a 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246'
 ````
 Nikto 
 ````
 > nikto -host IP
+````
+
+Whatweb 
+````
+> whatweb IP
+````
+
+### SNMP 
+Check even if sU says filtered
+````
+> snmpwalk -c public -v2c [IP]
+> snmpwalk -c public -v1 -t 10 [IP] 
+> snmp-check [IP]
 ````
 
 

