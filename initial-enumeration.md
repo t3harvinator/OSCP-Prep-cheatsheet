@@ -1,5 +1,16 @@
 # Scanning 
 
+### NMAP First Scan
+````
+> sudo nmap -sS -p- IP
+````
+
+### NMAP Second Scan
+....
+> sudo nmap -sC -sV -p[PORTS] [IP] -Pn -oN manual_scan.txt
+....
+
+
 ### NMAP TCP quick 
 ````
 > sudo nmap -Pn -v -sS -sV -sC -oN tcp-quick.nmap IP
