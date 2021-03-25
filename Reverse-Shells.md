@@ -33,6 +33,7 @@ JSP
 ASP/ASPX
 /usr/share/webshells/asp/
 /usr/share/webshells/aspx/
+https://raw.githubusercontent.com/tennc/webshell/master/asp/webshell.asp
 
 Perl/CGI 
 /usr/share/webshells/perl/perl-reverse-shell.pl
