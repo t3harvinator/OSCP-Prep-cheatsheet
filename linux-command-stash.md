@@ -1,5 +1,8 @@
 
-
+## Random List
+```
+__import__('os').system('ls')
+```
 
 ## SSH Tunneling 101
 ```bash
