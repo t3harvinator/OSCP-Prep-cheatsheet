@@ -42,6 +42,12 @@
 
 # Enumeration 
 
+### Wordpress
+```
+wpscan --url sandbox.local --enumerate ap,at,cb,dbe
+wpscan --url http://10.10.10.88/webservices/wp -e ap --plugins-detection aggressive
+```
+
 ### FTP - Port 21 
 ````
 Check for FTP version vulns
