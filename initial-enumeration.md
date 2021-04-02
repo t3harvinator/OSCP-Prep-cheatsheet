@@ -254,7 +254,13 @@ If LFI, try to get source files
 example:
 GET /browse.php?file=php://filter/convert.base64-encode/resource=index.php HTTP/1.1
 
+### Catch cron jobs
 
+pspy
+https://github.com/DominicBreuker/pspy/releases/download/v1.0.0/pspy64s
+```
+./pspy
+```
 
 
 
