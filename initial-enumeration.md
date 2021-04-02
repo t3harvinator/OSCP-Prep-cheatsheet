@@ -45,6 +45,9 @@
 ### Wordpress
 ```
 wpscan --url sandbox.local --enumerate ap,at,cb,dbe
+```
+Add aggressive plugin detection if desperate.
+```
 wpscan --url http://10.10.10.88/webservices/wp -e ap --plugins-detection aggressive
 ```
 
