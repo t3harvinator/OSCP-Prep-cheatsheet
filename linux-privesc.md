@@ -343,6 +343,7 @@ find / perm /u=s -user "User name that you are looking for" 2>/dev/null
 ````
 find / -xdev -type d \( -perm -0002 -a ! -perm -1000 \) -print   # world-writeable files  
 find /dir -xdev \( -nouser -o -nogroup \) -print   # Noowner files  
+find -type f -writable #writable files
 ````
 
 ### Writable by current user  
