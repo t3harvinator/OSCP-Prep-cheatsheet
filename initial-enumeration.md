@@ -262,6 +262,14 @@ https://github.com/DominicBreuker/pspy/releases/download/v1.0.0/pspy64s
 ./pspy
 ```
 
+### WFuzz
+Can fuzz parts of a url
+https://book.hacktricks.xyz/pentesting-web/web-tool-wfuzz
+
+```
+wfuzz -c -z range,1-65536 --hl=2 http://10.10.10.55:60000/url.php?path=127.0.0.1:FUZZ
+```
+
 
 
 
