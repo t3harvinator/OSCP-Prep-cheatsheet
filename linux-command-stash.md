@@ -221,3 +221,9 @@ Can get the mode with
 ```
 hashid -m [file]
 ```
+
+### OpenSSL
+Start SSH server
+```
+opt/cert/openssl s_server -key /opt/cert/key.pem -cert /opt/cert/cert.pem -accept 4430 -HTTP
+```
