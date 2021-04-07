@@ -227,3 +227,11 @@ Start SSH server
 ```
 opt/cert/openssl s_server -key /opt/cert/key.pem -cert /opt/cert/cert.pem -accept 4430 -HTTP
 ```
+
+### PostGres
+
+```
+psql "sslmode=require host=192.168.245.60 dbname=postgres user=postgres password=postgres"
+psql "host=192.168.245.60 dbname=postgres user=postgres password=postgres"
+```
+
