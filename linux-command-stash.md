@@ -229,7 +229,7 @@ opt/cert/openssl s_server -key /opt/cert/key.pem -cert /opt/cert/cert.pem -accep
 ```
 
 ### PostGres
-
+https://blog.pentesteracademy.com/postgresql-udf-command-execution-372f0c68cfed
 ```
 psql "sslmode=require host=192.168.245.60 dbname=postgres user=postgres password=postgres"
 psql "host=192.168.245.60 dbname=postgres user=postgres password=postgres"
