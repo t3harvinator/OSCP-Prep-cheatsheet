@@ -244,3 +244,9 @@ docker run -v /:/mnt --rm -it redmine chroot /mnt sh
 ### Hashcat Cracking
 https://miloserdov.org/?p=5426#7
 hashcat -m 400 -a 0 wp_hash /usr/share/wordlists/rockyou.txt
+
+### MSSQL CLI
+Activate scratchpy3
+```
+mssql-cli -U sa -P EjectFrailtyThorn425 -S 192.168.245.70,1435
+```
