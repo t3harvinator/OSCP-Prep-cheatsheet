@@ -243,3 +243,4 @@ docker run -v /:/mnt --rm -it redmine chroot /mnt sh
 
 ### Hashcat Cracking
 https://miloserdov.org/?p=5426#7
+hashcat -m 400 -a 0 wp_hash /usr/share/wordlists/rockyou.txt
