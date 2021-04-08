@@ -240,3 +240,6 @@ psql "host=192.168.245.60 dbname=postgres user=postgres password=postgres"
 docker run -it -v /:/mnt postgres /bin/bash
 docker run -v /:/mnt --rm -it redmine chroot /mnt sh
 ```
+
+### Hashcat Cracking
+https://miloserdov.org/?p=5426#7
