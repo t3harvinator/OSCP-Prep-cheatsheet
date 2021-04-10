@@ -273,6 +273,12 @@ wfuzz -c -z range,1-65536 --hl=2 http://10.10.10.55:60000/url.php?path=127.0.0.1
 ### Git piece together
 https://github.com/internetwache/GitTools
 
+### Wordpress
+```
+wpscan --url http://10.10.10.88/webservices/wp/ --enumerate ap,at,cb,dbe
+wpscan --url http://10.10.10.88/webservices/wp -e ap --plugins-detection aggressive
+```
+
 
 
 
