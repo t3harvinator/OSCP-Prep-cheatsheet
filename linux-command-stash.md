@@ -251,3 +251,12 @@ Activate scratchpy3
 mssql-cli -U sa -P EjectFrailtyThorn425 -S 192.168.245.70,1435
 ```
 https://www.tarlogic.com/en/blog/red-team-tales-0x01/
+
+### Gitlab Rails
+```
+gitlab-rails console -e production
+user = User.where(id: 1).first
+user.password = 'password1'
+user.password_confirmation = 'password1'
+user.save!
+```
